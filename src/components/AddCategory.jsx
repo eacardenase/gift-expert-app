@@ -10,9 +10,11 @@ const AddCategory = ({ onAddCategory }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (inputValue.trim().length < 2) return;
+        const newInputValue = inputValue.trim();
 
-        onAddCategory(inputValue);
+        if (newInputValue.length < 2) return;
+
+        onAddCategory(newInputValue);
         setInputValue('');
     };
 
