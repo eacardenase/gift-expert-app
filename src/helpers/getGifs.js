@@ -7,15 +7,11 @@ export const getGifs = async (category) => {
         const resp = await fetch(url);
         const { data } = await resp.json();
 
-        const gifsData = data.map(({ id, title, images }) => {
-            return {
-                id,
-                url: images.downsized_medium.url,
-                title,
-            };
-        });
-
-        console.log(gifsData);
+        const gifsData = data.map(({ id, title, images }) => ({
+            id,
+            url: images.downsized_medium.url,
+            title,
+        }));
 
         return gifsData;
     } catch (error) {
