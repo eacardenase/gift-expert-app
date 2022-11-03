@@ -1,9 +1,6 @@
 import PropTypes from 'prop-types';
 
 const GifGridItem = ({ url, title }) => {
-    console.log(url);
-    console.log(title);
-
     return (
         <div className="card">
             <img src={url} alt={title} />
