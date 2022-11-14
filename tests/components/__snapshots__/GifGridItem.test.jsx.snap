@@ -1,0 +1,17 @@
+// Vitest Snapshot v1
+
+exports[`<GifGridItem /> > should match with the snapshoot 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="Test title"
+      src="www.google.com"
+    />
+    <p>
+      Test title
+    </p>
+  </div>
+</div>
+`;
