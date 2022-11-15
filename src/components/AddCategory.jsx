@@ -14,14 +14,16 @@ export const AddCategory = ({ onAddCategory }) => {
 
         const newInputValue = inputValue.trim();
 
-        if (newInputValue.length < 2) return;
+        if (newInputValue.length < 2) {
+            return;
+        }
 
         onAddCategory(newInputValue);
         setInputValue('');
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} aria-label="form">
             <input
                 type="text"
                 placeholder="Buscar gifs"
